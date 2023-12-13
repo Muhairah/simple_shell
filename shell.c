@@ -64,7 +64,7 @@ int main(int ac __attribute__((unused)), char **av, char **env)
 			free(splitt);
 			continue;
 		}
-		switch (mema_shell(line, splitt, lines, env, av, error_value))
+		switch (m_sh(line, splitt, lines, env, av, error_value))
 		{
 			case 0:
 				error = *error_value;
@@ -83,7 +83,7 @@ int main(int ac __attribute__((unused)), char **av, char **env)
 
 
 /**
- * mema_shell - my mema shell
+ * m_sh - my mema shell
  * @line: the imput from the user
  * @split: proccessed input
  * @lines: ammount of lines
@@ -94,7 +94,7 @@ int main(int ac __attribute__((unused)), char **av, char **env)
  * Return: 10 if success, 0 if exit, 1 if continue, -1 if return-1
 */
 
-int mema_shell(char *line, char **split, int lines, char **env, char **av, int *err)
+int m_sh(char *line, char **split, int lines, char **env, char **av, int *err)
 {
 	char *command;
 	int i;

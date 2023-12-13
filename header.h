@@ -15,7 +15,7 @@
 
 /* simple_shell.c */
 int exec_mema_shell(char *command, char **arguments, char *av);
-int mema_shell(char *, char **, int, char **, char **, int *);
+int m_sh(char *, char **, int, char **, char **, int *);
 void not_found(int lines, char *split, char **av);
 char *line_make(size_t size);
 
